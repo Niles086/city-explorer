@@ -1,7 +1,7 @@
 # Project Name
-
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+![lightscore](./searchlh.PNG)
+**Author**: Niles Thompson
+**Version**: 1.9.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 
