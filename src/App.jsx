@@ -41,7 +41,7 @@ await getWeather(data.lat, data.lon);
     if (lat && lon) {
 
       try {
-        const API = `http://localhost:3000/weather?lat=${lat}&lon=${lon}&searchQuery=${searchQuery}`;
+        const API = `http://localhost:3000/weather?&searchQuery=${searchQuery}`;
         console.log(API, lat, lon);
         const response = await axios.get(API);
         const query = response.data;
