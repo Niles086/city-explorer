@@ -88,5 +88,6 @@ await getWeather(data.lat, data.lon);
 
       </>
     )
+    
   
 }
