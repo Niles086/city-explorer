@@ -84,10 +84,10 @@ await getWeather(data.lat, data.lon);
           style={{ maxWidth: '80%' }}
 
         />}
-        <RenderWeather />
+        <RenderWeather weatherReport={weatherReport}/>
 
       </>
     )
-    
+
   
 }
