@@ -1,10 +1,17 @@
 
-export default function RenderWeather() {
+export default function RenderWeather(props) {
+   
     
     return (
-        <div>
-           <p>Hello</p> 
-           <p></p>
-        </div>
+        <>
+        {props.weatherReport.map((item, index)=>{
+            return (
+                <div key={index}>
+                    <p>{item.date}</p>
+                    <p>{item.description}</p>
+                </div>
+            )
+        })}
+        </>
     )
 }
