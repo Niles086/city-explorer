@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import React from 'react'
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert } from 'bootstrap';
 import './App.css'
 import RenderWeather from './components/weather';
+import RenderMovies from './components/RenderMovies';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const SERVER = import.meta.env.VITE_SERVER;
@@ -16,6 +18,7 @@ export default function App() {
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
   const [weatherReport, setWeatherReport] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   async function getLocation() {
     try {
@@ -29,6 +32,7 @@ setLongitude(data.lon);
 setLocation(data);
 setError(null);
 await getWeather(data.lat, data.lon);
+getMovies();
 } catch (error) {
       setError('An error occurred with the API call');
     }
@@ -55,6 +59,20 @@ await getWeather(data.lat, data.lon);
       }
     }
   }
+
+  async function getMovies() {
+    if (location) {
+      try {
+        const movieAPIurl = `https://city-explorer-api-7n8z.onrender.com/movie?searchQuery=${searchQuery}`;
+        const movieResponse = await axios.get(movieAPIurl);
+        setMovies(movieResponse.data);
+        console.log(movieResponse.data);
+      } catch (error) {
+        console.log('Error fetching movie data:', error)
+      }
+    }
+  }
+
     function onSearchChange(event) {
       setSearchQuery(event.target.value);
     }
@@ -85,7 +103,7 @@ await getWeather(data.lat, data.lon);
 
         />}
         <RenderWeather weatherReport={weatherReport}/>
-
+        <RenderMovies movies={movies} location={location}/>
       </>
     )
 
