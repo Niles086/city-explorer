@@ -11,6 +11,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const SERVER = import.meta.env.VITE_SERVER;
 
 
+
 export default function App() {
   const [location, setLocation] = useState({ display_name: 'info' });
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,7 +46,9 @@ await getMovies();
     if (lat && lon) {
 
       try {
+
         const API = `${SERVER}/weather?&searchQuery=${searchQuery}`;
+
         console.log(API, lat, lon);
         const response = await axios.get(API);
         const query = response.data;
