@@ -11,6 +11,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const SERVER = import.meta.env.VITE_SERVER;
 
 
+
 export default function App() {
   const [location, setLocation] = useState({ display_name: 'info' });
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,7 +46,7 @@ getMovies();
     if (lat && lon) {
 
       try {
-        const API = `http://localhost:3000/weather?&searchQuery=${searchQuery}`;
+        const API = `https://niles-city-explorer-api.onrender.com?&searchQuery=${searchQuery}`;
         console.log(API, lat, lon);
         const response = await axios.get(API);
         const query = response.data;
