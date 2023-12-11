@@ -7,6 +7,7 @@ import RenderWeather from './components/weather';
 import RenderMovies from './components/RenderMovies';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const API_KEY = import.meta.env.VITE_API_KEY;
 const SERVER = import.meta.env.VITE_SERVER;
 
