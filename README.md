@@ -97,6 +97,33 @@ Finish time: 140
 
 Actual time needed to complete: 10 minutes
 
+Name of feature: Weather PlaceHolder
+Estimate of time needed to complete: 1 hour
+
+Start time:     1pm
+
+Finish time: 230 PM
+
+Actual time needed to complete: 130
+
+Name of feature: Weather Live
+Estimate of time needed to complete: 1 hour
+
+Start time:     1pm
+
+Finish time:  4 PM
+
+Actual time needed to complete: 3 hours
+
+Name of feature: Weather Live
+Estimate of time needed to complete: 1 hour
+
+Start time:     1pm
+
+Finish time:  4 PM
+
+Actual time needed to complete: 3 hours
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
